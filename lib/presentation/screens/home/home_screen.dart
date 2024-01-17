@@ -6,6 +6,8 @@ import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  static String name = 'home_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,6 +56,7 @@ class _CustomListTile extends StatelessWidget {
         //     builder: (context) => const ButtonsScreen()
         //   )
         // );
+        // context.pushNamed(ButtonsScreen.name);
         context.push(menu.link);
       },
     );
