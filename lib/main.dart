@@ -13,9 +13,9 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 1).getTheme(),
-      home: const Scaffold(
+      home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: FilledButton(child: const Text('Hola'), onPressed: () {},),
         ),
       ),
     );
