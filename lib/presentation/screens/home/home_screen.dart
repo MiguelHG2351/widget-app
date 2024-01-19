@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Widgets App'),
       ),
       body: const _HomeView(),
+      // drawer: NavigationDrawer(children: []),
     );
   }
 }
