@@ -13,8 +13,9 @@ class ButtonsScreen extends StatelessWidget {
         title: const Text('Buttons screens'),
       ),
       body: const _ButtonsView(),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.arrow_back_ios_new_outlined),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: const Icon(Icons.arrow_back_ios_new_outlined),
+        label: const Text('Sumar'),
         onPressed: () => context.pop(),
       ),
     );
