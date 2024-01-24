@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/theme/menu/menu_item.dart';
 
 class SideMenu extends StatefulWidget {
-  const SideMenu({super.key});
+  final GlobalKey<ScaffoldState> scaffoldKey;
+
+  const SideMenu({
+    super.key,
+    required this.scaffoldKey
+  });
 
   @override
   State<SideMenu> createState() => _SideMenuState();
@@ -19,6 +25,10 @@ class _SideMenuState extends State<SideMenu> {
         setState(() {
           navDrawerIndex = value;
         });
+
+        final menuItem = appMenuItems[value];
+        context.push(menuItem.link);
+        widget.scaffoldKey.currentState?.closeDrawer();
       },
       children: [
         const Padding(
